@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathJax Example (No Style)</title>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Allow $...$ and \(...\) for inline math
+                displayMath: [['$$', '$$'], ['\\[', '\\]']] // Allow $$...$$ and \[...\] for displayed math
+            },
+            svg: {
+                fontCache: 'global' // Recommended for better performance on subsequent loads
+            }
+        };
+    </script>
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <h1>MathJax Demonstration (No Style)</h1>
+    <p>This page showcases how to render mathematical expressions using MathJax, without any custom CSS.</p>
+
+    <h2>Inline Mathematics</h2>
+    <p>
+        Here's an example of an inline equation: The famous formula for the area of a circle is $A = \pi r^2$.
+        You can also use the `\(...\)` delimiters, like so: The Pythagorean theorem states that \(a^2 + b^2 = c^2\).
+        These are good for short expressions embedded within sentences.
+    </p>
+
+    <h2>Displayed Mathematics</h2>
+    <p>
+        For larger, more complex equations, it's often better to display them on their own line.
+        Here's the quadratic formula using `$$...$$` delimiters:
+    </p>
+    $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+    <p>
+        And here's another example, using the `\[...\]` delimiters for an integral:
+    </p>
+    \[ \int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2} \]
+
+    <h2>More Complex Examples (LaTeX Syntax)</h2>
+
+    <h3>Matrices</h3>
+    <p>A 2x2 matrix can be written as:</p>
+    $$
+    \mathbf{M} = \begin{pmatrix}
+    a & b \\
+    c & d
+    \end{pmatrix}
+    $$
+
+    <h3>Systems of Equations</h3>
+    <p>We can also represent systems of equations:</p>
+    $$
+    \begin{cases}
+    2x + 3y = 7 \\
+    x - y = 1
+    \end{cases}
+    $$
+
+    <h3>Limits and Sums</h3>
+    <p>Consider the definition of a derivative using a limit:</p>
+    $$
+    f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+    $$
+
+    <p>And a simple sum:</p>
+    $$
+    \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+    $$
+
+    <h3>Fractions and Roots with Scaling Parentheses</h3>
+    <p>Notice how the parentheses automatically scale to fit the fraction:</p>
+    $$
+    E = mc^2 \left( 1 + \frac{p^2}{2m^2c^2} \right)
+    $$
+
+    <p>A cube root example:</p>
+    $$
+    \sqrt[3]{x^3 + y^3} \neq x + y
+    $$
+
+    <h2>How to View This File</h2>
+    <ol>
+        <li>Save the code above into a file named `mathjax_no_style.html`.</li>
+        <li>Open the `mathjax_no_style.html` file with your web browser.</li>
+        <li>You'll see the mathematical expressions rendered by MathJax, using your browser's default styles.</li>
+    </ol>
+
+</body>
+</html>
